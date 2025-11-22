@@ -1,4 +1,5 @@
-// API Base URL
+// Smart Mode Detection - Auto-switch between Dynamic (local server) and Static (GitHub Pages)
+const isLocalServer = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 const API_URL = 'http://localhost:3000/api';
 
 // Global state
@@ -12,21 +13,67 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('pid')) {
         loadParentsList();
     }
+
+    // Show mode indicator
+    showModeIndicator();
 });
 
-// Load all family members
-async function loadFamilyData() {
-    try {
-        console.log('Fetching from:', `${API_URL}/family`);
-        const response = await fetch(`${API_URL}/family`);
+// Show which mode we're running in
+function showModeIndicator() {
+    if (document.getElementById('personForm')) { // Admin page only
+        const indicator = document.createElement('div');
+        indicator.style.cssText = 'position: fixed; top: 10px; right: 10px; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; z-index: 9999; box-shadow: 0 2px 8px rgba(0,0,0,0.2);';
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+        if (isLocalServer) {
+            indicator.style.background = '#4CAF50';
+            indicator.style.color = 'white';
+            indicator.innerHTML = '🔧 Dynamic Mode (Local)';
+        } else {
+            indicator.style.background = '#ff9800';
+            indicator.style.color = 'white';
+            indicator.innerHTML = '📖 Read-Only (GitHub Pages)';
         }
 
-        const data = await response.json();
-        console.log('Loaded data:', data.length, 'members');
-        familyData = data;
+        document.body.appendChild(indicator);
+    }
+}
+
+// Load all family members - SMART MODE
+async function loadFamilyData() {
+    try {
+        if (isLocalServer) {
+            // Dynamic mode - use API
+            console.log('🔧 Dynamic Mode: Fetching from API:', `${API_URL}/family`);
+            const response = await fetch(`${API_URL}/family`);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('✅ Loaded from API:', data.length, 'members');
+            familyData = data;
+        } else {
+            // Static mode - read details.json directly
+            console.log('📖 Static Mode: Loading from details.json');
+            const response = await fetch('./details.json');
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const jsonData = await response.json();
+            familyData = jsonData.kanagala || jsonData.members || jsonData;
+
+            if (!Array.isArray(familyData)) {
+                throw new Error('Data is not in array format');
+            }
+
+            console.log('✅ Loaded from JSON:', familyData.length, 'members');
+
+            // Disable admin features on GitHub Pages
+            disableAdminFeaturesForStatic();
+        }
 
         // Only call admin functions if elements exist
         if (document.getElementById('familyList')) {
@@ -638,5 +685,70 @@ if (personModal) {
         if (event.target == personModal) {
             closeModal();
         }
+    }
+}
+
+// Disable admin features when deployed to GitHub Pages (static mode)
+function disableAdminFeaturesForStatic() {
+    const adminPage = document.getElementById('personForm');
+    if (!adminPage) return; // Not on admin page
+
+    // Show prominent notice
+    const notice = document.createElement('div');
+    notice.style.cssText = 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; margin: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2);';
+    notice.innerHTML = `
+        <h3 style="margin: 0 0 10px 0; font-size: 18px;">📖 Read-Only Mode - GitHub Pages</h3>
+        <p style="margin: 0 0 15px 0; opacity: 0.9;">This site is deployed statically. Admin features are view-only.</p>
+        <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
+            <p style="margin: 0 0 8px 0; font-weight: bold;">✏️ To Make Changes:</p>
+            <ol style="text-align: left; margin: 10px auto; max-width: 400px; line-height: 1.8;">
+                <li>Run <code style="background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 4px;">node server.js</code> locally</li>
+                <li>Edit data in dynamic mode</li>
+                <li>Commit and push to GitHub</li>
+                <li>Changes appear here automatically!</li>
+            </ol>
+        </div>
+    `;
+
+    const container = document.querySelector('.container');
+    if (container) {
+        container.insertBefore(notice, container.firstChild);
+    }
+
+    // Disable all form inputs
+    const inputs = document.querySelectorAll('#personForm input, #personForm select, #personForm textarea');
+    inputs.forEach(input => {
+        input.disabled = true;
+        input.style.opacity = '0.6';
+        input.style.cursor = 'not-allowed';
+    });
+
+    // Disable buttons
+    const buttons = document.querySelectorAll('#personForm button, .btn');
+    buttons.forEach(button => {
+        button.disabled = true;
+        button.style.opacity = '0.5';
+        button.style.cursor = 'not-allowed';
+        button.title = 'Disabled in static mode - Run locally to edit';
+    });
+
+    // Override form submission
+    const personForm = document.getElementById('personForm');
+    if (personForm) {
+        personForm.onsubmit = function (e) {
+            e.preventDefault();
+            alert('⚠️ Cannot save on GitHub Pages\n\nThis is a static site (read-only).\n\nTo make changes:\n1. Run "node server.js" locally\n2. Edit data in dynamic mode\n3. Push to GitHub');
+            return false;
+        };
+    }
+
+    // Disable add buttons
+    const addButton = document.querySelector('.add-btn');
+    if (addButton) {
+        addButton.onclick = function (e) {
+            e.preventDefault();
+            alert('⚠️ Add feature disabled on GitHub Pages\n\nRun the dynamic server locally to add members.');
+            return false;
+        };
     }
 }

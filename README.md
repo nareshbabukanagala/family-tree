@@ -1,26 +1,23 @@
 # 🌳 Kanagala Family Tree
 
-**A beautiful, interactive family tree visualization - Free on GitHub Pages!**
+A beautiful, interactive family tree visualization system with **smart hybrid deployment** - edit locally with full features, deploy to GitHub Pages for free public viewing!
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://your-username.github.io/kanagala-family-tree/)
-[![GitHub Pages](https://img.shields.io/badge/hosted-GitHub%20Pages-blue)](https://pages.github.com/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+## ✨ Key Features
 
----
+### **🎯 Smart Hybrid System**
+- 🔧 **Dynamic Mode** (Local): Full add/edit/delete capabilities
+- 📖 **Static Mode** (GitHub Pages): Free public hosting, read-only
+- 🤖 **Auto-Detection**: Same code works everywhere - no manual switching!
 
-## ✨ Features
-
-- 🌳 **Interactive Tree View** - Visual hierarchical family tree
-- 📋 **List View** - Detailed member list with search
-- 👨‍👩‍👧‍👦 **Spouse Relationships** - Automatic spouse pairing
-- 🖼️ **Photo Support** - Circular profile pictures
-- 🎨 **Color Coding** - Gender-based colors (Blue/Pink)
-- 📱 **Responsive** - Works on desktop, tablet, and mobile
-- 🔍 **Search** - Find family members quickly
-- 📊 **Statistics** - Quick family stats
-- 🆓 **Free Hosting** - Deployed on GitHub Pages
-
----
+### **Core Features**
+- 📊 **Interactive Tree View**: Visual family tree with hierarchical relationships
+- 📝 **Admin Panel**: Full family management interface
+- 🖼️ **Photo Support**: Upload and display family photos
+- 💑 **Spouse Relationships**: Automatic spouse pairing and display
+- 👶 **Quick Actions**: Hover buttons to add children/spouses directly from tree
+- 🔍 **Search & Browse**: Find family members easily
+- 📱 **Responsive Design**: Works perfectly on all devices
+- 🎨 **Modern UI**: Clean, intuitive interface
 
 ## 🚀 Quick Start
 

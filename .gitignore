@@ -1,4 +1,4 @@
-# Dependencies
+# Node - Exclude dependencies but keep config files
 node_modules/
 package-lock.json
 
@@ -12,17 +12,26 @@ package-lock.json
 # OS
 .DS_Store
 Thumbs.db
-desktop.ini
-
-# Backup files
-*.backup
-*.bak
-*.tmp
 
 # Logs
 *.log
 npm-debug.log*
 
-# Local environment
+# Temp/Backup
+*.tmp
+*.bak
+*.backup
+*_backup.*
+.backup/
+
+# Local development only - GitHub Pages won't use these
+# But we keep them in repo so you can pull and run locally
+# server.js - Keep in repo
+# package.json - Keep in repo
+# START_DYNAMIC_SERVER.bat - Keep in repo
+
+# Logs
+*.log
+npm-debug.log*
 .env
 .env.local
