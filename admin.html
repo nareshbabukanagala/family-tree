@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Kanagala Family Tree - Admin Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        .header {
+            background: #2196F3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .tree-view {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-height: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #2196F3;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1976D2;
+        }
+
+        .btn-success {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #45a049;
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #da190b;
+        }
+
+        .btn-secondary {
+            background: #757575;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #616161;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .person-card {
+            border: 2px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background: #fafafa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .person-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-color: #2196F3;
+        }
+
+        .person-card.male {
+            border-left: 4px solid #2196F3;
+        }
+
+        .person-card.female {
+            border-left: 4px solid #E91E63;
+        }
+
+        .person-info h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .person-info p {
+            color: #666;
+            font-size: 13px;
+            margin: 3px 0;
+        }
+
+        .person-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .person-actions button {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .tree {
+            padding: 20px;
+            min-width: 100%;
+            display: inline-block;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+            white-space: nowrap;
+        }
+
+        .tree li>a {
+            display: inline-block;
+            vertical-align: middle;
+            white-space: normal;
+        }
+
+        .tree li::before,
+        .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #ccc;
+            width: 50%;
+            height: 20px;
+        }
+
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #ccc;
+        }
+
+        .tree li:only-child::after,
+        .tree li:only-child::before {
+            display: none;
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        .tree li:first-child::before,
+        .tree li:last-child::after {
+            border: 0 none;
+        }
+
+        .tree li:last-child::before {
+            border-right: 2px solid #ccc;
+            border-radius: 0 5px 0 0;
+        }
+
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #ccc;
+            width: 0;
+            height: 20px;
+        }
+
+        .tree li a {
+            text-decoration: none;
+            color: #333;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 5px;
+            min-width: 100px;
+            max-width: 100px;
+        }
+
+        /* Circular photo container */
+        .tree li a img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .tree li a.male img {
+            border-color: #2196F3;
+        }
+
+        .tree li a.female img {
+            border-color: #E91E63;
+        }
+
+        /* Name below photo */
+        .tree li a .name {
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 8px;
+            text-align: center;
+            display: block;
+            line-height: 1.2;
+            max-width: 100px;
+            word-wrap: break-word;
+            color: #333;
+        }
+
+        /* Hide title by default */
+        .tree li a .title {
+            display: none;
+        }
+
+        /* Hover effect - enlarge photo */
+        .tree li a:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .tree li a.male:hover img {
+            border-color: #1976D2;
+        }
+
+        .tree li a.female:hover img {
+            border-color: #C2185B;
+        }
+
+        /* Metadata tooltip on hover */
+        .tree li a::after {
+            content: attr(data-info);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 11px;
+            white-space: pre-line;
+            min-width: 200px;
+            max-width: 300px;
+            text-align: left;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .tree li a:hover::after {
+            opacity: 1;
+        }
+
+        /* Tooltip arrow */
+        .tree li a::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 101;
+            margin-bottom: 2px;
+        }
+
+        .tree li a:hover::before {
+            opacity: 1;
+        }
+
+        /* Spouse relationship styling */
+        .spouse-group {
+            display: inline-flex;
+            gap: 10px;
+            position: relative;
+            align-items: center;
+        }
+
+        .spouse-group::before {
+            content: '💑';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            z-index: 1;
+            background: white;
+            padding: 2px;
+            border-radius: 50%;
+        }
+
+        .spouse-line {
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background: linear-gradient(to right, #E91E63, #2196F3);
+            margin: 0;
+            position: relative;
+            top: -25px;
+            vertical-align: middle;
+        }
+
+        /* Enhanced card shadows and animations */
+        .tree li a {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tree li a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .tree li a.male:hover {
+            border-color: #1976D2;
+            background: #BBDEFB;
+        }
+
+        .tree li a.female:hover {
+            border-color: #C2185B;
+            background: #F8BBD0;
+        }
+
+        /* Better image styling */
+        .tree li a img {
+            border: 3px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tree li a.male img {
+            border-color: #2196F3;
+        }
+
+        .tree li a.female img {
+            border-color: #E91E63;
+        }
+
+        /* Connection lines color coding */
+        .tree li::before,
+        .tree li::after,
+        .tree ul ul::before {
+            border-color: #90A4AE;
+        }
+
+        /* Wrapper for person card with actions */
+        .person-card-wrapper {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Quick action buttons on hover - overlay on image */
+        .person-quick-actions {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 800;
+            white-space: nowrap;
+        }
+
+        .person-card-wrapper:hover .person-quick-actions {
+            display: flex;
+        }
+
+        .quick-btn {
+            background: rgba(76, 175, 80, 0.95);
+            color: white;
+            border: 2px solid white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            transition: all 0.2s;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+            pointer-events: auto;
+            position: relative;
+            z-index: 801;
+            min-width: 70px;
+        }
+
+        .quick-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .quick-btn.spouse-btn {
+            background: rgba(233, 30, 99, 0.95);
+        }
+
+        .quick-btn.child-btn {
+            background: rgba(33, 150, 243, 0.95);
+        }
+
+        .quick-btn:active {
+            transform: scale(0.95);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            color: #333;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            background: #f0f0f0;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            background: #2196F3;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        #treeContainer {
+            overflow: auto;
+            max-height: 600px;
+        }
+
+        .search-box {
+            margin-bottom: 15px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .alert {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .view-toggle {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🔐 Kanagala Family Tree - Admin Panel</h1>
+        <p>Add, Edit, and Manage Family Members</p>
+        <a href="index.html"
+            style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: white; color: #2196F3; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: bold;">←
+            Back to Public View</a>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2 style="margin-bottom: 20px;">Actions</h2>
+
+            <button class="btn btn-success" style="width: 100%; margin-bottom: 15px;" onclick="openAddModal()">
+                ➕ Add New Person
+            </button>
+
+            <button class="btn btn-primary" style="width: 100%; margin-bottom: 15px;" onclick="loadFamilyData()">
+                🔄 Refresh Data
+            </button>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="searchPeople()">
+            </div>
+
+            <h3 style="margin: 20px 0 10px 0;">Quick Stats</h3>
+            <p id="totalCount">Total Members: 0</p>
+            <p id="maleCount">Male: 0</p>
+            <p id="femaleCount">Female: 0</p>
+        </div>
+
+        <div class="tree-view">
+            <div class="view-toggle">
+                <button class="tab-btn active" onclick="switchView('list')">📋 List View</button>
+                <button class="tab-btn" onclick="switchView('tree')">🌳 Tree View</button>
+            </div>
+
+            <div class="alert alert-success" id="successAlert"></div>
+            <div class="alert alert-error" id="errorAlert"></div>
+
+            <div id="listView" class="tab-content active">
+                <h2>Family Members</h2>
+                <div id="familyList"></div>
+            </div>
+
+            <div id="treeView" class="tab-content">
+                <h2>Family Tree</h2>
+                <div id="treeContainer">
+                    <div class="tree" id="treeDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div id="personModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New Person</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+
+            <form id="personForm" enctype="multipart/form-data">
+                <input type="hidden" id="personId" name="id">
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pid">Parent (Father/Mother)</label>
+                    <select id="pid" name="pid">
+                        <option value="">-- Root Person (No Parent) --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="spouse">Spouse (Optional)</label>
+                    <select id="spouse" name="spouse" onchange="handleSpouseSelection()">
+                        <option value="">-- No Spouse --</option>
+                    </select>
+                    <small style="color: #666;">Select to link as married couple</small>
+                </div>
+
+                <!-- Hidden field for tags - automatically managed -->
+                <input type="hidden" id="tags" name="tags">
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+
+                <div class="form-group">
+                    <label for="occupation">Occupation</label>
+                    <input type="text" id="occupation" name="occupation">
+                </div>
+
+                <div class="form-group">
+                    <label for="education">Education</label>
+                    <input type="text" id="education" name="education">
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Photo</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                    <small style="color: #666;">Max 5MB (JPG, PNG, GIF)</small>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-success">💾 Save</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

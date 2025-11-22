@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanagala Family Tree</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        .header {
+            background: #2196F3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            margin-bottom: 5px;
+        }
+
+        .admin-link {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: #2196F3;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .admin-link:hover {
+            background: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .tree-view {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-height: 600px;
+        }
+
+        #treeContainer {
+            overflow: auto;
+            max-height: 80vh;
+        }
+
+        .tree {
+            padding: 20px;
+            min-width: 100%;
+            display: inline-block;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+            white-space: nowrap;
+        }
+
+        .tree li>a {
+            display: inline-block;
+            vertical-align: middle;
+            white-space: normal;
+        }
+
+        .tree li::before,
+        .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #ccc;
+            width: 50%;
+            height: 20px;
+        }
+
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #ccc;
+        }
+
+        .tree li:only-child::after,
+        .tree li:only-child::before {
+            display: none;
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        .tree li:first-child::before,
+        .tree li:last-child::after {
+            border: 0 none;
+        }
+
+        .tree li:last-child::before {
+            border-right: 2px solid #ccc;
+            border-radius: 0 5px 0 0;
+        }
+
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #ccc;
+            width: 0;
+            height: 20px;
+        }
+
+        .tree li a {
+            text-decoration: none;
+            color: #333;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 5px;
+            min-width: 100px;
+            max-width: 100px;
+        }
+
+        /* Circular photo container */
+        .tree li a img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .tree li a.male img {
+            border-color: #2196F3;
+        }
+
+        .tree li a.female img {
+            border-color: #E91E63;
+        }
+
+        /* Name below photo */
+        .tree li a .name {
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 8px;
+            text-align: center;
+            display: block;
+            line-height: 1.2;
+            max-width: 100px;
+            word-wrap: break-word;
+            color: #333;
+        }
+
+        /* Hover effect - enlarge photo */
+        .tree li a:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .tree li a.male:hover img {
+            border-color: #1976D2;
+        }
+
+        .tree li a.female:hover img {
+            border-color: #C2185B;
+        }
+
+        /* Metadata tooltip on hover */
+        .tree li a::after {
+            content: attr(data-info);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 11px;
+            white-space: pre-line;
+            min-width: 200px;
+            max-width: 300px;
+            text-align: left;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .tree li a:hover::after {
+            opacity: 1;
+        }
+
+        /* Tooltip arrow */
+        .tree li a::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 8px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1001;
+            margin-bottom: 2px;
+        }
+
+        .tree li a:hover::before {
+            opacity: 1;
+        }
+
+        /* Spouse connection line */
+        .spouse-line {
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background: linear-gradient(to right, #E91E63, #2196F3);
+            margin: 0;
+            position: relative;
+            top: -25px;
+            vertical-align: middle;
+        }
+
+        /* Connection lines color coding */
+        .tree li::before,
+        .tree li::after,
+        .tree ul ul::before {
+            border-color: #90A4AE;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🌳 Kanagala Family Tree</h1>
+        <p>Explore our family heritage</p>
+        <a href="admin.html" class="admin-link">🔐 Admin</a>
+    </div>
+
+    <div class="container">
+        <div class="tree-view">
+            <h2 style="margin-bottom: 20px;">Family Tree</h2>
+            <div id="treeContainer">
+                <div class="loading">Loading family tree...</div>
+                <div class="tree" id="treeDiv"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Hide loading message after content loads or on error
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loading after 3 seconds max
+            setTimeout(() => {
+                const loading = document.querySelector('.loading');
+                if (loading) loading.style.display = 'none';
+            }, 3000);
+        });
+
+        // Also hide when tree is rendered
+        window.addEventListener('treeRendered', () => {
+            const loading = document.querySelector('.loading');
+            if (loading) loading.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

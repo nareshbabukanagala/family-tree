@@ -1,0 +1,1819 @@
+{
+    "kanagala": [
+        {
+            "id": "1",
+            "tags": [
+                "f01"
+            ],
+            "name": "Kanagala",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "2",
+            "tags": [
+                "f02"
+            ],
+            "pid": "1",
+            "name": "Kotayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "3",
+            "tags": [
+                "f03"
+            ],
+            "pid": "1",
+            "name": "Venkayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "4",
+            "tags": [
+                "f04"
+            ],
+            "pid": "3",
+            "name": "Rangayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "5",
+            "tags": [
+                "f05"
+            ],
+            "pid": "3",
+            "name": "Pichayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "6",
+            "tags": [
+                "f06"
+            ],
+            "pid": "3",
+            "name": "Ramaswamy",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "10",
+            "tags": [
+                "f3"
+            ],
+            "pid": "5",
+            "name": "Venkata Krishnaiah",
+            "gender": "Male",
+            "occupation": "Farmer",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "11",
+            "tags": [
+                "f3"
+            ],
+            "name": "Saimpu Narayanamma",
+            "gender": "Female",
+            "occupation": "Farmer",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763740066848-958806847.jpg"
+        },
+        {
+            "id": "12",
+            "tags": [
+                "f4"
+            ],
+            "pid": "10",
+            "name": "Venkataratnam",
+            "gender": "Female",
+            "occupation": "House wife",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "13",
+            "tags": [
+                "f5"
+            ],
+            "pid": "10",
+            "name": "Sarogini",
+            "gender": "Female",
+            "occupation": "House wife",
+            "address": "House Wife"
+        },
+        {
+            "id": "14",
+            "tags": [
+                "f6"
+            ],
+            "pid": "10",
+            "name": "Kanagala Nageswara Rao",
+            "gender": "Male",
+            "occupation": "Farmer",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "15",
+            "tags": [
+                "f7"
+            ],
+            "pid": "10",
+            "name": "Mohanrao",
+            "gender": "Male",
+            "occupation": "Farmer",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "16",
+            "tags": [
+                "f8"
+            ],
+            "pid": "10",
+            "name": "Satyanarayana",
+            "gender": "Male",
+            "occupation": "Business",
+            "address": "Guntur",
+            "img": "./images/kanagala/1763739766564-161584168.jpg"
+        },
+        {
+            "id": "17",
+            "tags": [
+                "f9"
+            ],
+            "pid": "10",
+            "name": "Anjaneyulu",
+            "gender": "Male",
+            "occupation": "Farmer",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763728811276-221968841.JPG"
+        },
+        {
+            "id": "18",
+            "tags": [
+                "f4"
+            ],
+            "name": "Saimpu Veeranarayana",
+            "gender": "Male",
+            "education": "8th Class",
+            "occupation": "Teacher",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "19",
+            "tags": [
+                "f5"
+            ],
+            "name": "Gangavarapu Jagannadam",
+            "gender": "Male",
+            "occupation": "Farmer",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "20",
+            "tags": [
+                "f6"
+            ],
+            "name": "Vijayalakshmi",
+            "gender": "Female",
+            "education": "10th Class",
+            "occupation": "Anganvadi Teacher",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "21",
+            "tags": [
+                "f7"
+            ],
+            "name": "Chirumamilla Annapurna",
+            "gender": "Female",
+            "occupation": "Farmer",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "22",
+            "tags": [
+                "f8"
+            ],
+            "pid": "12",
+            "name": "Saimpu Rajeswari",
+            "gender": "Female",
+            "education": "Intermediate",
+            "occupation": "House wife",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763739850790-924074724.jpg"
+        },
+        {
+            "id": "23",
+            "tags": [
+                "f9"
+            ],
+            "name": "Jasti Nagendram",
+            "gender": "Female",
+            "occupation": "Farmer",
+            "address": "kamepalli",
+            "img": "./images/kanagala/1763728827906-127469134.jpg"
+        },
+        {
+            "id": "25",
+            "tags": [
+                "f10"
+            ],
+            "pid": "12",
+            "name": "Saimpu Vijayalakshmi",
+            "gender": "Female",
+            "education": "Intermediate",
+            "occupation": "House wife",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "26",
+            "tags": [
+                "f11"
+            ],
+            "pid": "12",
+            "name": "Saimpu Balamuralikrishna",
+            "gender": "Male",
+            "education": "BE",
+            "occupation": "Softwate Engineer",
+            "address": "US"
+        },
+        {
+            "id": "27",
+            "tags": [
+                "f12"
+            ],
+            "pid": "13",
+            "name": "Gangavarapu Lakshmaiah",
+            "gender": "Male",
+            "occupation": "Farmer",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "28",
+            "tags": [
+                "f13"
+            ],
+            "pid": "13",
+            "name": "Gangavarapu Koteswara Rao",
+            "gender": "Male",
+            "occupation": "Business",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "29",
+            "tags": [
+                "f14"
+            ],
+            "pid": "13",
+            "name": "Ganagavarapu Dhanalakshmi",
+            "gender": "Female",
+            "occupation": "House wife",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "30",
+            "tags": [
+                "f15"
+            ],
+            "pid": "14",
+            "name": "Narayana Swamy",
+            "gender": "Male",
+            "education": "Degree",
+            "occupation": "Job",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763740087309-81268502.jpg"
+        },
+        {
+            "id": "31",
+            "tags": [
+                "f16"
+            ],
+            "pid": "14",
+            "name": "Kranthi kiran",
+            "gender": "Male",
+            "education": "Degree",
+            "occupation": "Job",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763740098283-725486796.jpg"
+        },
+        {
+            "id": "32",
+            "tags": [
+                "f17"
+            ],
+            "pid": "15",
+            "name": "Narayana Rao",
+            "gender": "Male",
+            "education": "Degree",
+            "occupation": "Job",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763739973687-482736246.jpg"
+        },
+        {
+            "id": "33",
+            "tags": [
+                "f18"
+            ],
+            "pid": "15",
+            "name": "Nagarjuna",
+            "gender": "Male",
+            "education": "MCA",
+            "occupation": "Job",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763739950138-280478204.jpg"
+        },
+        {
+            "id": "34",
+            "tags": [
+                "f19"
+            ],
+            "pid": "16",
+            "name": "Sindhuri",
+            "gender": "Female",
+            "education": "MBA",
+            "occupation": "House wife",
+            "address": "Guntur"
+        },
+        {
+            "id": "35",
+            "tags": [
+                "f20"
+            ],
+            "pid": "16",
+            "name": "Harshita",
+            "gender": "Female",
+            "education": "MBBS",
+            "occupation": "Doctor",
+            "address": "Guntur",
+            "img": "./images/kanagala/1763739901911-120983226.jpg"
+        },
+        {
+            "id": "36",
+            "tags": [
+                "f21"
+            ],
+            "pid": "17",
+            "name": "Naresh babu",
+            "gender": "Male",
+            "education": "MCA",
+            "occupation": "Softwate Engineer",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763728712605-186219761.jpg"
+        },
+        {
+            "id": "37",
+            "tags": [
+                "f22"
+            ],
+            "pid": "17",
+            "name": "Krishnaveni",
+            "gender": "Female",
+            "education": "MBA",
+            "occupation": "House wife",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "38",
+            "tags": [
+                "f10"
+            ],
+            "name": "Siva",
+            "gender": "Male",
+            "occupation": "Business",
+            "address": "Neelayapalem"
+        },
+        {
+            "id": "39",
+            "tags": [
+                "f11"
+            ],
+            "name": "Gansi",
+            "gender": "Female",
+            "occupation": "House wife",
+            "address": "Panguluru"
+        },
+        {
+            "id": "40",
+            "tags": [
+                "f12"
+            ],
+            "name": "Sunanda",
+            "gender": "Female",
+            "occupation": "Teacher",
+            "address": "Dechavaram",
+            "img": "./images/kanagala/1763740123519-646252397.jpg"
+        },
+        {
+            "id": "41",
+            "tags": [
+                "f13"
+            ],
+            "name": "Sailaja",
+            "gender": "Female",
+            "occupation": "House wife",
+            "address": "Pamidipadu"
+        },
+        {
+            "id": "42",
+            "tags": [
+                "f14"
+            ],
+            "name": "Pemmasani Venkaiah",
+            "gender": "Male",
+            "occupation": "Farmer",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "43",
+            "tags": [
+                "f15"
+            ],
+            "name": "Parvathi",
+            "gender": "Female",
+            "occupation": "House wife",
+            "address": "Hyderabad"
+        },
+        {
+            "id": "44",
+            "tags": [
+                "f16"
+            ],
+            "name": "Naga Sai lakshmi",
+            "gender": "Female",
+            "occupation": "House wife",
+            "address": "Guntur"
+        },
+        {
+            "id": "45",
+            "tags": [
+                "f17"
+            ],
+            "name": "chirumamilla Naga Lakshmi",
+            "gender": "Female",
+            "occupation": "House wife",
+            "address": "Subbayapalem"
+        },
+        {
+            "id": "46",
+            "tags": [
+                "f18"
+            ],
+            "name": "Naga Lakshmi",
+            "gender": "Female",
+            "occupation": "House wife"
+        },
+        {
+            "id": "47",
+            "tags": [
+                "f19"
+            ],
+            "name": "Yerra Suresh Babu",
+            "gender": "Male",
+            "education": "MBBS, MD",
+            "occupation": "Doctor",
+            "address": "Thatikonda"
+        },
+        {
+            "id": "48",
+            "tags": [
+                "f20"
+            ],
+            "name": "Shanker",
+            "gender": "Male",
+            "occupation": "Business",
+            "address": "Guntur"
+        },
+        {
+            "id": "50",
+            "tags": [
+                "f22"
+            ],
+            "name": "Annangi Vamsikrishna",
+            "gender": "Male",
+            "education": "MSC Physics",
+            "occupation": "Geo scientist",
+            "address": "Ravinuthala"
+        },
+        {
+            "id": "51",
+            "pid": "25",
+            "name": "Veena",
+            "gender": "Female",
+            "address": "Guntur"
+        },
+        {
+            "id": "52",
+            "pid": "25",
+            "name": "Susmita",
+            "gender": "Female",
+            "address": "Guntur"
+        },
+        {
+            "id": "53",
+            "pid": "27",
+            "name": "Gangavarapu Navya",
+            "gender": "Male",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "54",
+            "pid": "27",
+            "name": "Gangavarapu Mani Shanker",
+            "gender": "Male",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "55",
+            "pid": "28",
+            "name": "Gangavarapu Praneetha chowdary",
+            "gender": "Female",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "56",
+            "pid": "28",
+            "name": "Gangavarapu Devisri",
+            "gender": "Female",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "57",
+            "pid": "29",
+            "name": "Pemmasani Yaswanth",
+            "gender": "Male",
+            "occupation": "Btech",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "58",
+            "pid": "29",
+            "name": "Pemmasani Vamsikrishna",
+            "gender": "Male",
+            "occupation": "Btech",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "59",
+            "pid": "31",
+            "name": "Charanvi",
+            "gender": "Female",
+            "address": "Guntur"
+        },
+        {
+            "id": "60",
+            "pid": "32",
+            "name": "Harshini",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "61",
+            "pid": "32",
+            "name": "Lokesh",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "62",
+            "pid": "32",
+            "name": "Lokeswari",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "63",
+            "pid": "34",
+            "name": "Devanshi",
+            "gender": "Female",
+            "address": "Thatikonda"
+        },
+        {
+            "id": "64",
+            "pid": "36",
+            "name": "Gnana Chaitra",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "65",
+            "pid": "37",
+            "name": "Annangi Aasritha",
+            "gender": "Female",
+            "address": "Ravinuthala"
+        },
+        {
+            "id": "66",
+            "tags": [
+                "f02"
+            ],
+            "name": "Varalakshmi",
+            "gender": "Female"
+        },
+        {
+            "id": "67",
+            "tags": [
+                "f23"
+            ],
+            "pid": "2",
+            "name": "Venkataramayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "68",
+            "tags": [
+                "f23"
+            ],
+            "name": "Samineni Banumati",
+            "gender": "Female",
+            "address": "Kavuroripalem"
+        },
+        {
+            "id": "69",
+            "tags": [
+                "f23"
+            ],
+            "name": "Kankanampati Anjana",
+            "gender": "Female",
+            "address": "Dechavaram"
+        },
+        {
+            "id": "70",
+            "tags": [
+                "f24"
+            ],
+            "pid": "67",
+            "name": "Nageswara Rao",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "71",
+            "tags": [
+                "f24"
+            ],
+            "name": "Samineni Padmavati",
+            "gender": "Female",
+            "address": "Kavuroripalem"
+        },
+        {
+            "id": "72",
+            "pid": "70",
+            "name": "Naveen",
+            "gender": "Male",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763740246366-785715766.jpg"
+        },
+        {
+            "id": "73",
+            "pid": "70",
+            "name": "Varalakshmi",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "74",
+            "tags": [
+                "f04"
+            ],
+            "name": "Venkata Subbamma",
+            "gender": "Female"
+        },
+        {
+            "id": "75",
+            "tags": [
+                "f25"
+            ],
+            "pid": "4",
+            "name": "Ragavayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "76",
+            "tags": [
+                "f26"
+            ],
+            "pid": "4",
+            "name": "Purushotham",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "77",
+            "tags": [
+                "f27"
+            ],
+            "pid": "4",
+            "name": "Narayana",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "78",
+            "tags": [
+                "f28"
+            ],
+            "pid": "4",
+            "name": "Kanthayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "79",
+            "tags": [
+                "f29"
+            ],
+            "pid": "4",
+            "name": "Seetharavamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "80",
+            "tags": [
+                "f30"
+            ],
+            "pid": "4",
+            "name": "Anasuyamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "81",
+            "tags": [
+                "f31"
+            ],
+            "pid": "4",
+            "name": "Rajamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "82",
+            "tags": [
+                "f32"
+            ],
+            "pid": "4",
+            "name": "Venkamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "83",
+            "tags": [
+                "f25"
+            ],
+            "name": "Kota Varamma",
+            "gender": "Female",
+            "address": "Kanagalavaripalem"
+        },
+        {
+            "id": "84",
+            "tags": [
+                "f26"
+            ],
+            "name": "Gorantla Sarojini",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "85",
+            "tags": [
+                "f27"
+            ],
+            "name": "Darmavarapu Narasamma",
+            "gender": "Female",
+            "address": "Thimmanapalem"
+        },
+        {
+            "id": "86",
+            "tags": [
+                "f28"
+            ],
+            "name": "Kota Anasuyamma",
+            "gender": "Female",
+            "address": "Kanagalavaripalem"
+        },
+        {
+            "id": "87",
+            "tags": [
+                "f29"
+            ],
+            "name": "Kota Anavayya",
+            "gender": "Male",
+            "address": "Kanagalavaripalem"
+        },
+        {
+            "id": "88",
+            "tags": [
+                "f30"
+            ],
+            "name": "Darmavarapu Narasayya",
+            "gender": "Male",
+            "address": "Thimmanapalem"
+        },
+        {
+            "id": "89",
+            "tags": [
+                "f31"
+            ],
+            "name": "Katragadda Ramayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "90",
+            "tags": [
+                "f32"
+            ],
+            "name": "Mallipeddi Venkata subbayaa",
+            "gender": "Male",
+            "address": "Komminenivaripalem"
+        },
+        {
+            "id": "91",
+            "tags": [
+                "f33"
+            ],
+            "pid": "75",
+            "name": "Narayanamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "92",
+            "tags": [
+                "f34"
+            ],
+            "pid": "75",
+            "name": "Sarasamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "93",
+            "tags": [
+                "f35"
+            ],
+            "pid": "75",
+            "name": "Subbarao",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "94",
+            "tags": [
+                "f33"
+            ],
+            "name": "Jayadi Anjayya",
+            "gender": "Male",
+            "address": "Sangupalem"
+        },
+        {
+            "id": "95",
+            "tags": [
+                "f34"
+            ],
+            "name": "Saimpu Koteswara Rao",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "96",
+            "tags": [
+                "f35"
+            ],
+            "name": "Katragadda Satyavati",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "97",
+            "tags": [
+                "f36"
+            ],
+            "pid": "93",
+            "name": "Ravi",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "98",
+            "tags": [
+                "f37"
+            ],
+            "pid": "93",
+            "name": "Ramadevi",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "99",
+            "tags": [
+                "f38"
+            ],
+            "pid": "93",
+            "name": "Subbamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "100",
+            "tags": [
+                "f36"
+            ],
+            "name": "Anuhya",
+            "gender": "Female",
+            "address": "Bommanampadu"
+        },
+        {
+            "id": "101",
+            "tags": [
+                "f37"
+            ],
+            "name": "Kota Anjaneyulu",
+            "gender": "Male",
+            "address": "Kanagalavaripalem"
+        },
+        {
+            "id": "102",
+            "tags": [
+                "f38"
+            ],
+            "pid": " ",
+            "name": "Gorantla Rambabu",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "103",
+            "tags": [
+                "f39"
+            ],
+            "pid": "76",
+            "name": "Nageswara Rao",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "104",
+            "tags": [
+                "f40"
+            ],
+            "pid": "76",
+            "name": "Hanumantha Rao",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "105",
+            "tags": [
+                "f41"
+            ],
+            "pid": "76",
+            "name": "Rangayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "106",
+            "tags": [
+                "f39"
+            ],
+            "name": "Katragadda Sarogini",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "107",
+            "tags": [
+                "f40"
+            ],
+            "name": "Mallipeddi Anjana",
+            "gender": "Female",
+            "address": "Komminenivaripalem"
+        },
+        {
+            "id": "108",
+            "tags": [
+                "f41"
+            ],
+            "name": "Devabatini Anjana",
+            "gender": "Female",
+            "address": "Kanagalavaripalem"
+        },
+        {
+            "id": "109",
+            "tags": [
+                "f42"
+            ],
+            "pid": "103",
+            "name": "Suresh",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "110",
+            "tags": [
+                "f42"
+            ],
+            "name": "Ravipati Sridevi",
+            "gender": "Female",
+            "address": "Addanki"
+        },
+        {
+            "id": "111",
+            "pid": "109",
+            "name": "Hemanth",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "112",
+            "pid": "109",
+            "name": "Anuhya",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "113",
+            "tags": [
+                "f43"
+            ],
+            "pid": "103",
+            "name": "Srinivas",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "114",
+            "tags": [
+                "f43"
+            ],
+            "name": "Mamilla Srilakshmi",
+            "gender": "Female",
+            "address": "Vemulabanda"
+        },
+        {
+            "id": "115",
+            "pid": "113",
+            "name": "Karthik",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "116",
+            "pid": "113",
+            "name": "Nikila",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "117",
+            "tags": [
+                "f44"
+            ],
+            "pid": "103",
+            "name": "Sridevi",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "118",
+            "tags": [
+                "f44"
+            ],
+            "name": "Bathula Subbarao",
+            "gender": "Male",
+            "address": "Thimmareddipalem"
+        },
+        {
+            "id": "119",
+            "pid": "117",
+            "name": "Bathula Gopichand",
+            "gender": "Male",
+            "address": "Thimmareddipalem"
+        },
+        {
+            "id": "120",
+            "pid": "117",
+            "name": "Bathula Krishna Chand",
+            "gender": "Male",
+            "address": "Thimmareddipalem"
+        },
+        {
+            "id": "121",
+            "tags": [
+                "f45"
+            ],
+            "pid": "104",
+            "name": "Rajarao",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "122",
+            "tags": [
+                "f45"
+            ],
+            "name": "Medarametla Lakshmi",
+            "gender": "Female",
+            "address": "Mundlamuru"
+        },
+        {
+            "id": "123",
+            "pid": "121",
+            "name": "Nagapunya Karthik",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "124",
+            "pid": "121",
+            "name": "Kesav Kumar",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "125",
+            "tags": [
+                "f46"
+            ],
+            "pid": "104",
+            "name": "Narayana Swamy",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "126",
+            "tags": [
+                "f46"
+            ],
+            "name": "Medikonda Sivaparvathi",
+            "gender": "Female",
+            "address": "Sankarapuram"
+        },
+        {
+            "id": "127",
+            "pid": "125",
+            "name": "Charan Teja",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "128",
+            "pid": "125",
+            "name": "Rathvik Sahi",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "129",
+            "tags": [
+                "f47"
+            ],
+            "pid": "105",
+            "name": "Narayanamma",
+            "gender": "Female",
+            "address": "Addanki"
+        },
+        {
+            "id": "130",
+            "tags": [
+                "f47"
+            ],
+            "name": "Unnam Venkateswara Rao",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "131",
+            "pid": "129",
+            "name": "Unnam Vyshnavi",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "132",
+            "pid": "129",
+            "name": "Unnam Anand Babu",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "133",
+            "tags": [
+                "f48"
+            ],
+            "pid": "105",
+            "name": "Nagasri",
+            "gender": "Female",
+            "address": "Addanki"
+        },
+        {
+            "id": "134",
+            "tags": [
+                "f48"
+            ],
+            "name": "Gorantla Surendra",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "135",
+            "tags": [
+                "f49"
+            ],
+            "pid": "77",
+            "name": "Ranganayakulu",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "136",
+            "tags": [
+                "f49"
+            ],
+            "name": "Katragadda Ragavayya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "137",
+            "tags": [
+                "f50"
+            ],
+            "pid": "77",
+            "name": "Anjamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "138",
+            "tags": [
+                "f50"
+            ],
+            "name": "Yarraboina Koteswara Rao",
+            "gender": "Male",
+            "address": "Jarlapalem"
+        },
+        {
+            "id": "139",
+            "tags": [
+                "f51"
+            ],
+            "pid": "77",
+            "name": "Venkateswarlu",
+            "gender": "Male",
+            "address": "East Kambhampadu",
+            "img": "./images/kanagala/1763740199271-257340709.jpeg"
+        },
+        {
+            "id": "141",
+            "tags": [
+                "f51"
+            ],
+            "name": "Kondru Sridevi",
+            "gender": "Female",
+            "address": "Agraharam",
+            "img": "./images/kanagala/1763740217601-96587621.jpeg"
+        },
+        {
+            "id": "142",
+            "tags": [
+                "f52"
+            ],
+            "pid": "77",
+            "name": "Rajamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "143",
+            "tags": [
+                "f52"
+            ],
+            "name": "Ramulu",
+            "gender": "Male",
+            "address": "Paguluru"
+        },
+        {
+            "id": "144",
+            "pid": "142",
+            "name": "Dhanalakshmi",
+            "gender": "Female",
+            "address": "Paguluru"
+        },
+        {
+            "id": "145",
+            "tags": [
+                "f53"
+            ],
+            "pid": "78",
+            "name": "Ragavamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "146",
+            "tags": [
+                "f53"
+            ],
+            "name": "Nallamothu Sri Ramamurthi",
+            "gender": "Female",
+            "address": "Nadendla"
+        },
+        {
+            "id": "147",
+            "tags": [
+                "f54"
+            ],
+            "pid": "78",
+            "name": "Suguna",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "148",
+            "tags": [
+                "f54"
+            ],
+            "name": "Kota Sivayya",
+            "gender": "Male",
+            "address": "Kanagalavaripalem"
+        },
+        {
+            "id": "149",
+            "tags": [
+                "f55"
+            ],
+            "pid": "78",
+            "name": "Kusuma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "150",
+            "tags": [
+                "f55"
+            ],
+            "name": "Kota Chowdary",
+            "gender": "Male",
+            "address": "Kanagalavaripalem"
+        },
+        {
+            "id": "151",
+            "tags": [
+                "f56"
+            ],
+            "pid": "79",
+            "name": "Seetharavamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "152",
+            "tags": [
+                "f56"
+            ],
+            "name": "Anavayya",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "153",
+            "pid": "151",
+            "name": "Basavayya",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "154",
+            "tags": [
+                "f57"
+            ],
+            "pid": "80",
+            "name": "Anasuyamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "155",
+            "tags": [
+                "f57"
+            ],
+            "name": "Narasayya",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "156",
+            "pid": "154",
+            "name": "Narasamma",
+            "gender": "Female",
+            "address": "Not Available"
+        },
+        {
+            "id": "157",
+            "pid": "154",
+            "name": "Varalakshmi",
+            "gender": "Female",
+            "address": "Not Available"
+        },
+        {
+            "id": "158",
+            "pid": "154",
+            "name": "Rajamma",
+            "gender": "Female",
+            "address": "Not Available"
+        },
+        {
+            "id": "159",
+            "pid": "154",
+            "name": "Sampurnamma",
+            "gender": "Female",
+            "address": "Not Available"
+        },
+        {
+            "id": "160",
+            "pid": "154",
+            "name": "Draksha",
+            "gender": "Female",
+            "address": "Not Available"
+        },
+        {
+            "id": "161",
+            "pid": "154",
+            "name": "Ramathulasamma",
+            "gender": "Female",
+            "address": "Not Available"
+        },
+        {
+            "id": "162",
+            "pid": "154",
+            "name": "Danamma",
+            "gender": "Female",
+            "address": "Not Available"
+        },
+        {
+            "id": "163",
+            "pid": "81",
+            "name": "Ragavayya",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "164",
+            "pid": "81",
+            "name": "Satyavati",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "165",
+            "pid": "81",
+            "name": "Dhanalakshmi",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "166",
+            "tags": [
+                "f58"
+            ],
+            "pid": "82",
+            "name": "Mallipeddi Vegamma",
+            "gender": "Female",
+            "address": "Komminenivaripalem"
+        },
+        {
+            "id": "167",
+            "tags": [
+                "f58"
+            ],
+            "name": "Konamaneni Dasaradaramayya",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "168",
+            "tags": [
+                "f59"
+            ],
+            "pid": "82",
+            "name": "Mallipeddi Dhanalakshmi",
+            "gender": "Female",
+            "address": "Komminenivaripalem"
+        },
+        {
+            "id": "169",
+            "tags": [
+                "f59"
+            ],
+            "name": "Gogineni Ramarao",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "170",
+            "tags": [
+                "f60"
+            ],
+            "pid": "82",
+            "name": "Mallipeddi Narasimharao",
+            "gender": "Male",
+            "address": "Komminenivaripalem"
+        },
+        {
+            "id": "171",
+            "tags": [
+                "f60"
+            ],
+            "name": "Ramadevi",
+            "gender": "Female",
+            "address": "Not Available"
+        },
+        {
+            "id": "172",
+            "tags": [
+                "f61"
+            ],
+            "pid": "82",
+            "name": "Mallipeddi Anjanadevi",
+            "gender": "Female",
+            "address": "Komminenivaripalem"
+        },
+        {
+            "id": "173",
+            "tags": [
+                "f61"
+            ],
+            "name": "Hanumantha Rao",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "174",
+            "tags": [
+                "f62"
+            ],
+            "pid": "82",
+            "name": "Mallipeddi Rajamma",
+            "gender": "Female",
+            "address": "Komminenivaripalem"
+        },
+        {
+            "id": "175",
+            "tags": [
+                "f62"
+            ],
+            "name": "kotapadu srinu",
+            "gender": "Male",
+            "address": "Not Available"
+        },
+        {
+            "id": "176",
+            "tags": [
+                "f06"
+            ],
+            "name": "Siddevamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "177",
+            "tags": [
+                "f63"
+            ],
+            "pid": "6",
+            "name": "Venkatappaya",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "178",
+            "tags": [
+                "f64"
+            ],
+            "pid": "6",
+            "name": "Suryanarayana",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "179",
+            "tags": [
+                "f65"
+            ],
+            "pid": "6",
+            "name": "Srikrishnaiah",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "180",
+            "tags": [
+                "f66"
+            ],
+            "pid": "6",
+            "name": "Ramanadam",
+            "gender": "Male",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "181",
+            "tags": [
+                "f67"
+            ],
+            "pid": "6",
+            "name": "Varalakshmi",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "182",
+            "tags": [
+                "f68"
+            ],
+            "pid": "6",
+            "name": "Rangamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "183",
+            "tags": [
+                "f69"
+            ],
+            "pid": "6",
+            "name": "Sarasamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "184",
+            "tags": [
+                "f70"
+            ],
+            "pid": "6",
+            "name": "Santamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "185",
+            "tags": [
+                "f71"
+            ],
+            "pid": "6",
+            "name": "Thulasamma",
+            "gender": "Female",
+            "address": "East Kambhampadu"
+        },
+        {
+            "id": "186",
+            "tags": [
+                "f63"
+            ],
+            "name": "Not Available",
+            "gender": "Female"
+        },
+        {
+            "id": "187",
+            "tags": [
+                "f64"
+            ],
+            "name": "Nagarathnam",
+            "gender": "Female"
+        },
+        {
+            "id": "188",
+            "tags": [
+                "f65"
+            ],
+            "name": "Rajamma",
+            "gender": "Female"
+        },
+        {
+            "id": "189",
+            "tags": [
+                "f66"
+            ],
+            "name": "Venkatarathnam",
+            "gender": "Female"
+        },
+        {
+            "id": "190",
+            "tags": [
+                "f67"
+            ],
+            "name": "Nayudamma",
+            "gender": "Male",
+            "address": "kanagalavaripalem"
+        },
+        {
+            "id": "191",
+            "tags": [
+                "f68"
+            ],
+            "name": "Lakshmaiah",
+            "gender": "Male",
+            "address": "Takkelapadu"
+        },
+        {
+            "id": "192",
+            "tags": [
+                "f69"
+            ],
+            "name": "Thirupathayya",
+            "gender": "Male",
+            "address": "kanagalavaripalem"
+        },
+        {
+            "id": "193",
+            "tags": [
+                "f70"
+            ],
+            "name": "Setaiah",
+            "gender": "Male",
+            "address": "kanagalavaripalem"
+        },
+        {
+            "id": "194",
+            "tags": [
+                "f71"
+            ],
+            "name": "Not Available",
+            "gender": "Male",
+            "address": "kanagalavaripalem"
+        },
+        {
+            "id": "229",
+            "name": "Hariharan",
+            "gender": "Male",
+            "address": "",
+            "occupation": "",
+            "education": "",
+            "tags": [],
+            "pid": "36"
+        },
+        {
+            "id": "230",
+            "name": "Karuna Muvva",
+            "gender": "Female",
+            "address": "",
+            "occupation": "",
+            "education": "",
+            "tags": [
+                "f21"
+            ],
+            "img": "./images/kanagala/1763733774561-263431958.jpg"
+        },
+        {
+            "id": "231",
+            "name": "Narayana Swamy",
+            "gender": "Male",
+            "address": "",
+            "occupation": "",
+            "education": "Btech",
+            "tags": [],
+            "pid": "139",
+            "img": "./images/kanagala/1763741387292-665989814.jpeg"
+        },
+        {
+            "id": "232",
+            "name": "Jyothi",
+            "gender": "Female",
+            "address": "",
+            "occupation": "Software Engineer",
+            "education": "",
+            "tags": [],
+            "pid": "141",
+            "img": "./images/kanagala/1763741430903-743417247.jpeg"
+        },
+        {
+            "id": "233",
+            "name": "Jyothi",
+            "gender": "Female",
+            "address": "",
+            "occupation": "",
+            "education": "",
+            "tags": [],
+            "pid": "139",
+            "img": "./images/kanagala/1763741487459-749014219.jpeg"
+        },
+        {
+            "id": "234",
+            "name": "Vurjitha",
+            "gender": "Female",
+            "address": "",
+            "occupation": "",
+            "education": "",
+            "tags": [],
+            "pid": "37"
+        }
+    ]
+}
